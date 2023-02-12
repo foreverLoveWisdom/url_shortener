@@ -24,6 +24,12 @@ group :development, :test do
   # Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution.
   gem 'pry-byebug', '~> 3.10', '>= 3.10.1'
 
+  # Great Ruby debugging companion: pretty print Ruby objects to visualize their structure
+  gem 'awesome_print', '~> 1.9', '>= 1.9.2'
+
+  # Use Pry as your rails console
+  gem 'pry-rails', '~> 0.3.9'
+
   # rspec-rails is a testing framework for Rails 5+.
   gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
 
@@ -54,6 +60,9 @@ group :development do
 
   # Guard::RSpec automatically run your specs (much like autotest).
   gem 'guard-rspec', '~> 4.7', '>= 4.7.3', require: false
+
+  # Ruby bindings for libnotify using FFI
+  gem 'libnotify', '~> 0.9.4'
 end
 
 # A RuboCop extension focused on enforcing Rails best practices and coding conventions.
