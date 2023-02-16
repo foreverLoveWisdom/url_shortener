@@ -342,6 +342,7 @@ Metrics/MethodLength:
   Max: 10
   Enabled: true
 
+### Disable unnecessary cops ###
 Metrics/BlockLength:
   CountComments: false
   Max: 5
@@ -355,3 +356,6 @@ Metrics/BlockLength:
     - draw
     - configure
     - group
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false

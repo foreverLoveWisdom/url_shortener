@@ -3,39 +3,50 @@
 require 'rails_helper'
 
 describe UrlEncodeService do
-  subject(:encoded_url) { described_class.new(original_url, repository).execute }
+  subject(:context) { described_class.new(original_url, repository).call }
 
-  let(:original_url) { 'http://example.com' }
+  let(:result) { context.result }
+  let(:original_url) { Faker::Internet.url }
   let(:repository) { instance_double(ShortenedUrlRepository) }
 
-  describe '#execute' do
+  describe '#call' do
     context 'when the URL is successfully shortened' do
       before do
         allow(repository).to receive(:create!).and_return(true)
       end
 
+      it 'succeeds' do
+        expect(context).to be_success
+      end
+
       it 'returns the shortened URL' do
-        expect(encoded_url).to be_a(String)
+        expect(result).to be_a(String)
       end
 
       it 'starts with the base URL' do
-        expect(encoded_url).to start_with(UrlEncodeService::BASE_URL)
+        expect(result).to start_with(UrlEncodeService::BASE_URL)
       end
 
       it 'creates a new shortened URL in the repository' do
-        encoded_url
+        context
 
         expect(repository).to have_received(:create!).with(original_url, anything)
       end
     end
 
     context 'when the URL cannot be shortened' do
+      let(:error_message) { 'Encoding url error' }
+
       before do
         allow(repository).to receive(:create!).and_raise(ActiveRecord::RecordInvalid)
       end
 
-      it 'raises an error' do
-        expect { encoded_url }.to raise_error('Error encoding URL: Record invalid')
+      it 'fails' do
+        expect(context).to be_failure
+      end
+
+      it 'returns correct message error' do
+        expect(command_service_error).to eq(error_message)
       end
     end
   end

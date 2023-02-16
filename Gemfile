@@ -11,6 +11,9 @@ gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 # Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later.
 gem 'pg', '~> 1.4', '>= 1.4.5'
 
+# Easy way to build and manage commands (service objects)
+gem 'simple_command', '~> 1.0', '>= 1.0.1'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
@@ -35,11 +38,17 @@ group :development, :test do
 
   # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
   gem 'faker', '~> 3.1', '>= 3.1.1'
+
+  # Factory Bot is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies (saved instances, unsaved instances, attribute hashes, and stubbed objects), and support for multiple factories for the same class (user, admin_user, and so on), including factory inheritance.
+  gem 'factory_bot_rails', '~> 6.2'
 end
 
 group :test do
   # Strategies for cleaning databases. Can be used to ensure a clean slate for testing.
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
+
+  # Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites
+  gem 'simplecov', '~> 0.22.0', require: false
 end
 
 group :development do

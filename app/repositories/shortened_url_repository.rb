@@ -2,12 +2,10 @@
 
 # Encapsulate database operations for ShortenedUrl
 class ShortenedUrlRepository
+  delegate :find_by, to: :model
+
   def initialize
     @model = ShortenedUrl
-  end
-
-  def find_by_short_url(short_url)
-    model.find_by(short_url:)
   end
 
   def create!(original_url, short_url)

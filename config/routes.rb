@@ -2,5 +2,5 @@
 
 Rails.application.routes.draw do
   post '/encode', to: 'shortened_url#encode'
-  get '/decode/:identifier', to: 'shortened_url#decode'
+  get '/decode', to: 'shortened_url#decode'
 end
