@@ -76,3 +76,6 @@ gem 'rubocop-rspec', require: false
 
 # Performance optimization analysis for your projects, as an extension to RuboCop.
 gem 'rubocop-performance', require: false
+
+# Bundler manages an application's dependencies through its entire life, across many machines, systematically and repeatably
+gem 'bundler', '~> 2.4', '>= 2.4.7'
