@@ -175,6 +175,11 @@ To deploy this project, follow these steps:
 
 - Follow [Heroku guide](https://devcenter.heroku.com/articles/getting-started-with-rails7#add-the-pg-gem)
 
+## Test Production Application
+- Heroku domain: `https://short-linkorama.herokuapp.com`
+- `curl --location --request POST 'https://short-linkorama.herokuapp.com/encode?url=https://www.google.com'`
+- `curl --location --request GET 'https://short-linkorama.herokuapp.com/decode?url=shortened_url'`
+
 ## Contributing
 
 Please follow the community best practices when contributing to this project.
