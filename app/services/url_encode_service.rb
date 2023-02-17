@@ -42,7 +42,7 @@ class UrlEncodeService
 
   def generate_short_url
     chars = generate_list_of_chars
-    short_url = chars.sample(NUM_CHARS)
+    short_url = chars.sample(NUM_CHARS).join
 
     "#{BASE_URL}/#{short_url}"
   end
