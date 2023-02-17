@@ -174,4 +174,4 @@ Please follow the community best practices when contributing to this project.
 
 ## License
 
-This project is licensed under the [MIT](my_link_to_MIT) license.
+This project is licensed under the [MIT](https://github.com/foreverLoveWisdom/url_shortener/blob/main/LICENSE.md) license.
