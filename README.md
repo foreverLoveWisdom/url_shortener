@@ -179,6 +179,11 @@ To deploy this project, follow these steps:
 - Heroku domain: `https://short-linkorama.herokuapp.com`
 - `curl --location --request POST 'https://short-linkorama.herokuapp.com/encode?url=https://www.google.com'`
 - `curl --location --request GET 'https://short-linkorama.herokuapp.com/decode?url=shortened_url'`
+- Tested with POSTMAN:
+![Screenshot from 2023-02-17 16-10-11](https://user-images.githubusercontent.com/63062498/219603939-8039ec20-ec3e-4cf1-8f23-92fe8939c380.png)
+![Screenshot from 2023-02-17 16-10-40](https://user-images.githubusercontent.com/63062498/219603969-75a46e20-8f97-4d3e-8b94-363e29dbfbc3.png)
+
+
 
 ## Contributing
 
