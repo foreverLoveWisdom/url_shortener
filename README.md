@@ -63,9 +63,10 @@ To run the test suite, run:
 
 ## How to Run the Application:
 
-- rails server
-- curl -X POST -d "url=your_original_url_here" http://localhost:3000/encode
-- curl -X GET http://localhost:3000/decode?url=your_shortened_url_here
+Run the following commands on your terminal in order:
+- `rails server`
+- `curl -X POST -d "url=your_original_url_here" http://localhost:3000/encode`
+- `curl -X GET http://localhost:3000/decode?url=your_shortened_url_here`
 
 ## Security
 
