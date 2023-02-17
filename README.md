@@ -61,6 +61,12 @@ To run the test suite, run:
 
 - rspec
 
+## How to Run the Application:
+
+- rails server
+- curl -X POST -d "url=your_original_url_here" http://localhost:3000/encode
+- curl -X GET http://localhost:3000/decode?url=your_shortened_url_here
+
 ## Security
 
 - Possible attack vectors:
@@ -166,7 +172,7 @@ This project uses the following services:
 
 To deploy this project, follow these steps:
 
-- None
+- Follow [Heroku guide](https://devcenter.heroku.com/articles/getting-started-with-rails7#add-the-pg-gem)
 
 ## Contributing
 
